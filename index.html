@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+ <title>Angela Ruslander's Bio</title>
+
+ <style>
+
+   #bio-box { border: 1px solid #ccc; padding: 10px; width: 800px; }
+
+   #hobbies { display: none; margin-top: 10px; text-align: center; font-size: 20px; color: blue;}
+
+ </style>
+
+</head>
+
+<body>
+
+
+
+ <h2 id="greeting">Hi, I'm a student!</h2>
+
+
+
+ <div id="bio-box">
+
+   <img src="img/Angela_Photo.jpg" alt="Angela's Photo" id="profile-pic" width="800"><br><br>
+
+   <button onclick="changeTextColor()" style="background-color: blue; color:white; width: 200px; padding: 10px; margin: 4px;">Change Text Color</button>
+
+   <button onclick="updateName()"  style="background-color: blue; color:white; width: 200px; padding: 10px; margin: 4px;">Update Name</button>
+
+   <button onclick="toggleHobbies()" style="background-color: blue; color:white; width: 200px; padding: 10px; margin: 4px;">Show/Hide Hobbies</button>
+
+   <button onclick="resetBio()" style="background-color: blue; color:white; width: 200px; padding: 10px; margin: 4px;">Reset</button>
+
+   <button onclick="changeImage()" style="background-color: blue; color:white; width: 200px; padding: 10px; margin: 4px;">Change Image</button>
+
+   <div id="hobbies">
+
+     <p>I love cooking, taking my dog on hikes, and fiber art!</p>
+   
+
+   </div>
+
+ </div>
+
+
+
+ <script>
+
+   function changeTextColor() {
+
+     document.getElementById("greeting").style.color = "blue";
+
+   }
+
+
+
+   function updateName() {
+
+     document.getElementById("greeting").innerText = "Hi, I'm Angela!";
+     document.getElementById("greeting").style.fontSize = "40px";
+
+   }
+
+
+
+   function toggleHobbies() {
+
+     const hobbies = document.getElementById("hobbies");
+
+     hobbies.style.display = hobbies.style.display === "none" ? "block" : "none";
+
+   }
+
+
+
+   function resetBio() {
+
+     document.getElementById("greeting").innerText = "Hi, I'm a student!";
+
+     document.getElementById("greeting").style.fontSize = "20px";
+
+     document.getElementById("greeting").style.color = "black";
+
+     document.getElementById("hobbies").style.display = "none";
+
+     document.getElementById("profile-pic").src='img/Angela_Photo.jpg';
+
+   }
+
+    function changeImage() {
+    
+    document.getElementById("profile-pic").src='img/Angela_Photo2.jpg';
+    document.getElementById("profile-pic").style.width="800";
+   }
+ </script>
+
+
+
+</body>
+
+</html>
